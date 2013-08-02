@@ -1,7 +1,11 @@
 'use strict';
 
-angular.module('sbjsApp')
-	.controller('ProfileCtrl', function($scope, auth){
-		$scope.profile = auth.fetchUserProfile();
+function ProfileController($scope, profile) {
+	$scope.profile = profile;
+};
+
+ProfileController.resolve = {
+	profile : function(auth, $q) {
+		return auth.fetchUserProfile();
 	}
-);
+}

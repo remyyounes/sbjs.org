@@ -1,7 +1,11 @@
 'use strict';
 
-angular.module('sbjsApp')
-	.controller('MembersCtrl', function($scope, auth){
-		$scope.members = auth.fetchMembers();
+function MembersController($scope, members) {
+	$scope.members = members;
+}
+
+MembersController.resolve = {
+	members: function(auth, $q){
+		return auth.fetchMembers();
 	}
-);
+};
