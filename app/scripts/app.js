@@ -9,6 +9,10 @@ angular.module('sbjsApp', ['ngCookies','$strap.directives','firebase'])
       .when('/members', {templateUrl: 'views/members.html', controller: 'MembersCtrl' })
       .when('/registration', {templateUrl: 'views/registration.html', controller: 'RegistrationCtrl' })
       .when('/fire', { templateUrl: 'views/fire.html', controller: 'FireCtrl' })
+      .when('/solar', {
+        templateUrl: 'views/solar.html',
+        controller: 'SolarCtrl'
+      })
       .otherwise({redirectTo: '/'});
 
     //Interceptor is used in case the token becomes invalid while the session is active.
