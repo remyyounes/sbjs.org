@@ -11,7 +11,7 @@ angular.module('sbjsApp', ['ngCookies','$strap.directives','firebase'])
       .when('/fire', { templateUrl: 'views/fire.html', controller: 'FireCtrl' })
       .when('/solar', {
         templateUrl: 'views/solar.html',
-        controller: 'SolarCtrl'
+        controller: 'SolarController'
       })
       .otherwise({redirectTo: '/'});
 

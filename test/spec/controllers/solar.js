@@ -1,22 +1,18 @@
 'use strict';
 
-describe('Controller: SolarCtrl', function () {
+describe('Controller: SolarController', function () {
 
   // load the controller's module
   beforeEach(module('sbjsApp'));
 
-  var SolarCtrl,
+  var SolarController,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    SolarCtrl = $controller('SolarCtrl', {
+    SolarController = $controller('SolarController', {
       $scope: scope
     });
   }));
-
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
-  });
 });
