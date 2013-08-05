@@ -91,8 +91,21 @@ angular.module('sbjsApp')
     	$scope.context = context;
     	$scope.balls = balls;
 
-    	setInterval($scope.bounceDemBalls, 50);
+    	$scope.startStopBalls();
 		};
+
+		$scope.startStopBalls = function(){
+			if ($scope.interval) {
+				// stop
+				clearInterval($scope.interval);
+				$scope.interval = undefined;
+				$("#toggle-action").val("Resume");
+			} else {
+				// start
+				$scope.interval = setInterval($scope.bounceDemBalls, 33);
+				$("#toggle-action").val("Pause");
+			}
+		}
 
     $scope.startCanvas();
 
