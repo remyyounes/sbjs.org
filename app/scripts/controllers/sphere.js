@@ -76,7 +76,7 @@ angular.module('sbjsApp')
     	// set its position
     	pointLight.position.x = 10;
     	pointLight.position.y = 50;
-    	pointLight.position.z = 190;
+    	pointLight.position.z = 120;
 
     	// add to the scene
     	scene.add(pointLight);
@@ -133,11 +133,6 @@ angular.module('sbjsApp')
     		// draw!
     		renderer.render(scene, camera);
     	}, 33);
-
-
-
-
-    	debugger
 
     };
 
