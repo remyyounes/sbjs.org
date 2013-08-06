@@ -34,7 +34,8 @@
         "ejs": "~0.8.4",
         "jade": "*",
         "restler": "*",
-        "firebase" : "0.6.1"
+        "firebase" : "0.6.1",
+        "three" : "0.58.9"
     },
     "scripts": {
         "test": "grunt test",
